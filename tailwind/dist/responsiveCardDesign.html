@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<!-- background-color, set height of body to full screen height, set body as grid container, place grid horizontally and vertically at center -->
+<body class="bg-slate-700 h-screen grid place-content-center">
+    <!-- set padding all sides, create border of width, rounded border, background color, box shadow, box shadow color, max width, horizontal space between child elements, set div as flex container, align-items: center -->
+    <div class="p-6 border-8 border-black rounded-3xl bg-white shadow-lg shadow-purple-600 max-w-2xl space-x-4 flex items-center">
+        <div>
+            <!-- height and width size -->
+            <img src="https://1000logos.net/wp-content/uploads/2016/10/Batman-Logo-1966.png" alt="" class="h-12 w-16">
+        </div>
+        <div>
+            <!-- font size, font-family, font-style -->
+            <div class="text-3xl font-mono font-bold">
+                Tailwind CSS
+                <!-- font-weight -->
+                <p class="font-medium">By Sarthak Srivastava</p>
+            </div>
+        </div>
+    </div>
+    <!-- create border of width, rounded border, padding, horizontal margin: auto to center the element, margin top, font-size, set background color to custom color by adding them tailwind.config.js, "hover" to style an element when it is begin hovered, "dark" to specify styles when browser is in dark mode   -->
+    <button class="border-2 rounded-xl p-2 mx-auto mt-6 text-lg bg-custom-beige hover:bg-custom-grey hover:text-white dark:bg-custom-pink">Buy Now!</button>
+
+    <!-- Responsive design: 
+        By default, Tailwind uses a mobile-first breakpoint system, similar to what you might be used to in other frameworks like Bootstrap. What this means is that unprefixed utilities (like bg-color) take effect on all screen sizes, while prefixed utilities (like md:uppercase) only take effect at the specified breakpoint and above. -->
+    <!-- Here for smaller than medium screensize the unprefixed utility will take effect, then for medium and above screen sizes green will take effect and for large and above screen sizes blue will take effect -->
+    <!-- Hence tailwind uses a mobile first approach i.e. the unprefixed utilities that we have been writing so far are for mobile screen, then if we want to override styles for larger screens we will use prefixed utilities -->
+    <button class="border-2 rounded-xl p-2 mx-auto mt-6 text-lg bg-custom-beige md:bg-custom-green lg:bg-custom-blue hover:bg-custom-grey hover:text-white dark:bg-custom-pink">Different colors at different breakpoints</button>
+
+    <!-- Building a responsive card: For mobiles we want image at top and text at bottom and for medium and above devices we want image at left and text at right. For that purpose we will use flexbox -->
+    <!-- creating border of width, border-color, rounding borders, since we have rounded borders, the image and the content div with its sharp corners was overflowing. To stop that we can use overflow-hidden, margin-top, max-width,  -->
+    <div class="border-2 border-black rounded-3xl overflow-hidden mt-10 max-w-2xl">
+        <!-- this wrapper is to apply flexbox: when size of screen is small or above I want image on left and content on right, and so I will apply flexbox -->
+        <div class="sm:flex">
+            <div class="">
+                <img src="https://images.unsplash.com/photo-1433838552652-f9a46b332c40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="sm:h-full">
+            </div>
+            <!-- background-color, padding, padding top, we can also set a custom font size using [] syntax, font-family -->
+            <div class="bg-custom-color p-4 pt-2 text-[18px] font-mono">
+                <!-- font-style -->
+                <header class="font-bold text-black text-center text-3xl uppercase tracking-widest">It's Always Sunny in <span class="bg-custom-color2">Philadelphia</span></header>
+                <!-- aligning text -->
+                <div class="text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ad dolorem quae laboriosam architecto, facilis, earum omnis error enim tempora accusantium adipisci, maxime sunt iusto numquam blanditiis dignissimos quia vero?
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,17 @@
+/* background-color
+   background-image
+   background-size: 200px 100px/contain/cover
+        contain=> Scales the image as large as possible without cropping or stretching the image. And if the container is bigger, we start getting repeat images. 
+        We can set background-repeat: no-repeat; if we dont want the image to repeat
+        cover=> Scales the image as large as possible without stretching the image
+  There is also a background shorthand, I'll learn about if I ever need it
+*/
+div{
+    border: 2px red solid;
+    height: 400px;
+    width: 500px;
+    background-image: url("https://img.freepik.com/free-vector/cloudy-sky-background-with-sun-flat-style_23-2147798732.jpg?q=10&h=200");
+    background-size: contain;
+    background-repeat: no-repeat
+    /* background-size: cover; */
+}

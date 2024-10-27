@@ -1,0 +1,141 @@
+/* Almost everything we do in CSS follows this basic pattern
+selector {
+    property: value;
+}
+*/
+
+/*          List of properties that are commonly used:
+1. color: color property allows us to specify the text color of an HTML element
+    (a)Hex Value=>
+          color: #000000;
+    (b)RGB=>
+          color: rgba(0, 0, 0);
+    
+    (c)RGBA=>
+          color: rgba(0, 0, 0, 0.3);
+                                |
+                                --------> represents opacity
+    (d)Named colors=>
+          color: red;
+
+2. font-size: The font-size property allows us to change the size of the font for any text based content. 
+    Ex] font-size: 48px;
+
+3. text-align: The text-align property specifies the horizontal alignment of text in an element
+    Ex] text-align: centre;
+
+4. background-color: The background-color property allows you to set the background color of an HTML element.
+    Ex] background-color: red;
+
+4. height and width: The height and width properties specify the height and width of a HTML element respectively.
+    Ex] height: 40px;
+        width: 60px;
+
+5. border: The border property allows you set a border for your HTML element. 
+    Ex] border: width type color;
+        border: 5px dashed black;
+
+6. border-radius: The border-radius property allows you to add rounded corners of a HTML elements.
+    Ex] border-radius: 25px;
+
+7. background-image: The background-image property allows us to add a background image to an HTML element. 
+    Ex] background-image: url("imagelink");
+
+8. width: The width property sets the width of an element explicitly to a specific value.
+It specifies the exact width of the element, which means the element will always have that fixed width, regardless of the size of its container or its content.
+If the content inside the element is wider than the specified width, it may overflow and not be fully visible.
+
+9. max-width: It just sets the maximum width that an element can have. It does not set the actual width. Suppose an element naturally tends to take the full width, then we can use max-wdith to limit that width. But if an element natually takes less width then max width then the max-width will have no effect. Hence max-width is often used in conjuction with width property
+
+*/
+
+/*                             Important Selectors:
+    *: Selects all elements
+    #id: Selects the element with specified id
+    .class: Selects all elements of specified class
+    .class1.class2: Selects all elements of both specified classes
+    .class1 .class2: Selects all elements of class2 that are descendants of elements of class1
+    element: Selects all <> elements
+    element.class: Selects all <> elements of specified class
+    <>[attribute=" "]: Selects all <> elements whose attribute is set to " "
+    
+    CSS COMBINATORS:
+    1. element(div), element(p): Selects all <div> elements and all <p> elements
+    2. element(div) element(p): "Descendant selector"
+                             Selects all <p> elements inside <div> elements
+    3. element(div) > element(p): "Child Selector"
+                             Selects all <p> element whose parent is <div>
+    4. element(div) + element(p): "Adjacent sibling selector"
+                             Selects the first <p> element that is placed immediately after <div>
+    Note: In CSS combinators the 'element' can be replaced with class or id or attribute also in any possible combination
+
+    Pseudo Classes: keywords added to a selector that specifies a special state of the selected element(s)
+    <>:hover: selects the element when the mouse hovers over it
+    <>:last-child: selects every <> element that is the last child of its parent
+    <>:first-child: selects every <> element that is the first child of its parent
+    
+
+    When there are conflicting CSS rules, then the rule that will win out depends on:
+      1. Importance(NOT RECOMMENDED): We can make a CSS rule highest priority by using !important. It will out even over inline styles.
+      2. Specificity: CSS specificity is a measure of how specific the selector of a CSS rule is. The rule with the more specific selector wins and is applied to the HTML element over other less specific ones. 
+                    : Order of impact on specificity value = __,__,__,__
+                        1. inline style
+                        2. id
+                        3. classes or attributes
+                        4. elements
+                    For example] if Selector of a css rule has 3 descendant selectors i.e. div h2 p {} then its specifity alue = 0030
+                                 If Selector of a css rule is #id then its specificity = 0100
+                                 Hence the selector with the id wil win out and its rules will be applied
+      
+      3. Order: The CSS rules that come later have higher priority
+
+  NOTE: ALso if there are multiple stylesheets linked in the html document, the rules of stylesheet that was linked later will win out over other stylesheets in case there is a conflict
+
+  NOTE: !important>specificty>order
+*/
+
+*{
+    font-size: 25px;
+  }
+  
+  #xxx{
+    color: red;
+  }
+  
+  .class1{
+    background-image: url("https://img.freepik.com/free-photo/white-cloud-blue-sky_74190-2381.jpg?size=626&ext=jpg");
+    background-size:cover;  
+  }
+  
+  .class1.class2{
+    color: beige;
+  }
+  
+  .class3 .a{
+    border: 2px dashed black;
+    
+  }
+  
+  span p{
+    text-align: center;
+  }
+  
+  span>div{
+    color: orange;
+  }
+  
+  p+div{
+    color: pink;
+  }
+  
+  a:hover{
+    color: gold;
+  }
+  
+  #xyz h3{
+    color: blue;
+  }
+  
+  .aaa h3{
+    color: grey;
+  }

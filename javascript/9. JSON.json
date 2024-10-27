@@ -1,0 +1,16 @@
+{
+    "squadname": "super mario",
+    "age": 21,
+    "drunk": false,
+    "OCD": null,
+    "members": [
+        "sarthak",
+        "kartik",
+        "anurag",
+        "pratibha"
+    ],
+    "characterstics": {
+        "strength": 100,
+        "agility": 200
+    }
+}

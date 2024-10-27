@@ -1,0 +1,9 @@
+/* I only wanted to display 'float' property in this pen. Float property is used when we want to display text alongside with images */
+img{
+  float: right;
+}
+/* This property is used to stop the float property and is almost always used with float, immediately after it */
+footer{
+  clear: both;
+}
+  

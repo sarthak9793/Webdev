@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <link rel="stylesheet" href="4. DOM events.css">
+</head>
+<body>
+    <button class="btn1">Click me!</button>
+    <button class="btn2">Hover me!</button>
+    <button class="btn3">Random colors!</button><br>
+
+    <button class="withoutthis1">Without 'this'</button>
+    <h1 class="withoutthis2">Without 'this'</h1>
+    <button class="demonstratingthis1">Demonstrating 'this'</button>
+    <h1 class="demonstratingthis2">Demonstrating 'this'</h1>
+
+    <button class="btn4">Event object</button><br>
+    <input type="form" class="keyboardevent" placeholder="keyboard event"><br><br>
+
+    <form action="/tacos" class="form">
+        <input type="form" class="input" placeholder="form event">
+        <button>Submit</button>
+    </form><br>
+
+    <h2 class="h2a"></h2>
+    <form action="" class="changeevent">
+        <input type="form" placeholder="change event" class="input2">
+    </form>
+    <h2 class="h2b"></h2>
+    <form action="" class="inputevent">
+        <input type="form" placeholder="input event" class="input3">
+    </form><br>
+
+    <div class="eventbubble">Click to hide
+        <button class="eventbubblebutton">Click to print in console</button>
+    </div><br>
+
+    <form action="" class="form2">
+        <input type="form" class="eventdelegation" placeholder="event delegation(problem)">
+        <button>Submit</button>
+        <ul class="ul">
+            <li>I am the OG li1</li>
+            <li>I am the OG li2</li>
+        </ul>
+    </form>
+    <form action="" class="form3">
+        <input type="form" class="eventdelegation2" placeholder="event delegation(solution)">
+        <button>Submit</button>
+        <ul class="ul2">
+            <li>I am the OG li1</li>
+            <li>I am the OG li2</li>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi aut mollitia consequatur, sapiente culpa nisi reprehenderit ad, rem magni quos tempora illo, ipsum dolor nostrum accusantium doloremque vero. Harum, atque.</p>
+        </ul>
+    </form>
+
+    <script src="4. DOM events.js"></script>
+</body>
+</html>

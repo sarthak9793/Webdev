@@ -1,0 +1,19 @@
+In this section we are creating our very first express app. 
+
+Note: Up until now, I was under the impression that the node.js code I had to write was to be written inside a react app. So I first created a react app and then I installed npm packages that I wanted to use, and used them inside the react app. This also lead to not be able to use many npm packages as they used require() instead of import. 
+BUT THIS WAS A VERY MORONIC ASSUMPTION, cuz first of all, node.js is not a programming language, so we weren't writing any "node.js" code, we were simply writing javascript inside a react app, that would get exexuted on the browser. Instead of using Node.js to execute javascript outside the browser which is the whole point of backend. So what we did in the language guesser game was not even remotely related to backed. We simple created a retarded frontend app.
+
+But now I have realized that actually the projects we are creating have two seperate parts. We are using react for frontend and node/express for backend and these two things are seperate from each other. Inside our project directory we will create two folders: client and server. Inside the client folder we will create our react app and inside the server folder we will create our node/express app.
+
+Setting up server files
+    - call "npm init" inside the server folder to create the package.json file. We can use "npm init -y" to automatically answer yes to all the questions
+    - Next, the guide prefers to set the name of the server file to server.js instead of the default index.js. 
+    - Create the server file server.js
+    - Modify the name of the server file inside the package.json file in the "main" key from the default index.js to server.js
+    - Next, install express by using "npm i express" command
+    - Then we will install nodemon so that when we make any changes to our server files, it will automatically restart the server. The manual way is to manually stop and start the server to see the changes reflected. Nodemon just automates that process. We will install nodemon by using the following command "npm i nodemon -D". The -D flag is to set the package as a dev dependency. What is dev dependency? There are two types of dependencies: 1. Regular dependency: Regular dependencies, often just referred to as "dependencies," are packages or libraries that your application or project requires to run in production. 2. Dev dependency: Development dependencies, on the other hand, are packages that are only required during the development and testing phases of your project. These packages are not necessary for your application to run in production. 
+    - Then in scripts(in package.json) we will create scripts to start up our node server("start": "node server") and nodemon server("dev": "nodemon server").
+    - Our server configuration is done, Next moving on to client configuration.
+Setting up client side
+    - We already know how to create a react app
+

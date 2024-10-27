@@ -1,0 +1,75 @@
+/*  The main uses of flexbox are:
+        1. Positioning items
+        2. Dynamically distributing space between items
+        3. Dynamically distributing space across items(i.e making them larger or smaller)
+    inside a container*/
+
+
+img{
+    height:200px;
+    width: 100px;
+  }
+.container{
+  height: 500px;
+  border: 2px solid red;
+  
+  display: flex;
+  flex-direction: row; /*default*/
+  flex-wrap: wrap;
+/*flex-flow: row wrap, shorthand for flex-direction and flex-wrap */
+  justify-content: space-between;  
+  align-items: center;
+  align-content: flex-start; /*only comes into effect when there is wrapping. It specifies how space is distributed in cross axis*/
+}
+.monkey{
+  order: -1;
+  /*Note: By default all flex items have order 0 and are arranged in the source order. So for us to order the flex items according to a specific order, we need to specify order of all flex items */
+  /* If we want to put a certain flex-item first, we can set its order to -1, if we want to place it at last we can set its order to 1 */
+  
+  align-self: flex-end; /*This allows the default alignment (or the one specified by align-items) to be overridden for individual flex items.*/
+}
+
+/* FLEX-BASIS & FLEX-GROW & FLEX-SHRINK */
+.flex-basis-grow-shrink{
+  display: flex;
+  width: 90%;
+  background-color: #003049;
+  border: 5px solid #003049;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.flex-basis-grow-shrink div{
+  width: 100px;
+  height: 200px;
+  background-color: darkslategray;
+  /* flex-basis defines the default size(along the main axis) of an element before the available space is distributed. If we set the flex-basis to 400px, the width of the elements of the becomes 400px even though we have set the width to be 200px*/
+  /* flex-basis: 400px; */
+  
+  /* flex-grow controls the amount of space than an element should take up if there is extra space available. The default value of flex-grow is 0 i.e items will not grow even if there is extra space available. If you set an item's flex-grow to 1, then it will take up all of the available space. If you set one item's flex-grow to 1 and another item's flex-grow to 2, then the second item will take up twice of the avaiable space as compared to the available space taken up by the first item. If you set all item's flex-grow to 1 or any other natural number then the available space will be distributed equally between all the items. More facts for autism: if you set flex-grow to 0.5, then the item will take up 0.5 times the available space. Also negative value are invalid */
+
+  /* Flex-shrink controls how the elements shrink when there is not enough space in the container. The default value of flex-shrink is 1 i.e. if we keep reducing the size of container below the minimum size required to hold all the items, then the items will start to shrink normally so that they can all fit inside the container. To test flex-shrink, turn off flex-wrap and set flex-basis to something large so that all the items are not able to fit in the container, then set flex-shrink of one or more items, this will govern how these items will shrink compared to other items so that all the items can fit in the container. The items with flex-shrink value>1 will shrink faster than normal and items with flex-shrink value<1 will shrink slower than normal. If we set flex-shrink to 0 that means that the item will not shrink at all. Negative values are not allowed in flex-shrink */
+    /* flex-basis: 400px; */
+}
+.a{
+  flex-grow: 2; 
+}
+.b{
+  flex-grow: 1;
+}
+
+/* .c{
+  flex-shrink: 1.2;
+}
+.d{
+  flex-shrink: 1.5;
+} */
+
+/* FLEX SHORTHAND */
+  /* Syntax=> flex: flew-grow flew-shrink flex-basis */
+
+/* We can control the max-size and min-size that an object can grow/shrink to using max-width/min-width */
+
+/* Note: Flex-box properties only apply to the immediate children of the container */
+
+/* Note: We can also have nested flex-boxes. For ex] a container may have multiple flex-items and one of those flex-items may in itself be a container with flex-items inside. */
+

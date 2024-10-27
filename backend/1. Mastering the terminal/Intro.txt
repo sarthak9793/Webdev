@@ -1,0 +1,6 @@
+Terminal: A text based interface to your computer
+Shell: It is the program running on the terminal
+Bash: It is one of the most popular shell
+Git: Git is the version control system itself that is used for tracking changes in source code during software development.
+Git Bash: While Git Bash is a command-line environment that provides a Unix-like terminal on Windows and allows you to interact with Git repositories using Git commands. Git Bash is just one of several ways to work with Git on Windows
+ 

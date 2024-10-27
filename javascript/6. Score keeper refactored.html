@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeper Refactored</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="columns is-centered m-6">
+            <div class="column is-half">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-5by3">
+                            <img src="https://images.unsplash.com/photo-1534158914592-062992fbe900?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3784&q=80"
+                                alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <header class="card-header">
+                        <p class="card-header-title">
+                            Ping Pong Score Keeper
+                        </p>
+                    </header>
+                    <div class="card-content">
+                        <div class="media-content">
+                            <p class="title is-4"><span class="displaypoints1">0</span> to <span class="displaypoints2">0</span></p>
+                            <p class="subtitle is-6">Use the buttons to keep score</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <label for="select" class="label is-inline is-size-4">Playing to</label>
+                        <div class="select is-rounded">
+                            <select id="select" name="point">
+                                <option value="1" class="option">1</option>
+                                <option value="2" class="option">2</option>
+                                <option value="3" selected class="option">3</option>
+                                <option value="4" class="option">4</option>
+                                <option value="5" class="option">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-content pb-0 px-3">
+                        <div class="columns">
+                        </div>
+                    </div>
+                    <footer class="card-footer">
+                        <button class="button has-background-primary has-text-white card-footer-item player1pointbutton">+1 Player One</button>
+                        <button class="button has-background-info has-text-white card-footer-item player2pointbutton">+1 Player Two</button>
+                        <button class="button has-background-danger has-text-white card-footer-item reset">Reset</button>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="6. Score keeper refactored.js"></script>
+</body>
+
+</html>

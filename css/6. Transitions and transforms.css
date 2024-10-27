@@ -1,0 +1,99 @@
+  /*Transitions enable you to define the transition between two states of an element. Different states may be defined using pseudo-classes like :hover or :active or dynamically set using JavaScript.
+  
+  Syntax:           
+  transition: [transition-property(req)] [transition-duration(req)] [transition-timing-function(opt)] [transition-delay(opt)]; 
+  */  
+  
+  /* No Transition */
+  .no-transition{
+    border: 5px solid red;
+    height: 100px;
+    width: 100px;  
+  }
+  .no-transition:hover {
+    border: 5px dashed blue;
+    border-radius: 50%;
+  }
+  
+  /* Some properties transition */
+  .only-border {
+    border: 5px solid red;
+    height: 100px;
+    width: 100px;
+    transition: border 1s;
+  }
+  .only-border:hover {
+    border: 5px dashed blue;
+    border-radius: 50%;
+  }
+  
+  .only-border-radius{
+    border: 5px solid red;
+    height: 100px;
+    width: 100px;
+    transition: border-radius 1s;  
+  }
+  .only-border-radius:hover {
+    border: 5px dashed blue;
+    border-radius: 50%;
+  }
+  
+  /* All properties transition */
+  .all-properties{
+    border: 5px solid red;
+    height: 100px;
+    width: 100px;
+    transition: all 1s;  
+  }
+  .all-properties:hover {
+    border: 5px dashed blue;
+    border-radius: 50%;
+  }
+
+
+  
+  /* Transforms: With the CSS transform property you can rotate, move, skew, and scale elements.
+      1. scale: The scale value allows you to increase or decrease the size of an element.
+      2. rotate:With the rotate value, the element rotates clockwise or counterclockwise by a specified number of degrees. 
+      3. translate: The translate value moves an element left/right and up/down. The movement is based on the parameters given for the X (horizontal) Y (vertical) axes. +values move right and bottom respectively
+      4. transform(shorthand)=> transform: rotate(90deg) scale(2) translate(-50%,100%);  
+  */
+  .scale {
+    border: 5px solid red;
+    height: 100px;
+    width: 100px;
+    transition: transform 1s;
+  }
+  .scale:hover {
+    transform: scale(1.1);
+  }
+  
+  .rotate {
+    border: 5px solid red;
+    height: 100px;
+    width: 100px;
+    transition: transform 1s;
+  }
+  .rotate:hover {
+    transform: rotate(90deg);
+  }
+  
+  .translate{
+    border: 5px solid red;
+    height: 100px;
+    width: 100px;
+    transition: transform 1s;
+  }
+  .translate:hover{
+    transform: translate(50px,50px);
+  }
+  
+  .transform-shorthand{
+    border: 5px solid red;
+    height: 100px;
+    width: 100px;
+    transition: transform 1s;
+  }
+  .transform-shorthand:hover{
+    transform: rotate(90deg) scale(2) translate(-50%,-100%);
+  }

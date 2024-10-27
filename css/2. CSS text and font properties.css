@@ -1,0 +1,34 @@
+/*
+1. color: color property allows us to specify the text color of an HTML element
+    (a)Hex Value=>
+          color: #000000;
+    (b)RGB=>
+          color: rgba(0, 0, 0);    
+    (c)RGBA=>
+          color: rgba(0, 0, 0, 0.3);
+                                |
+                                --------> represents opacity
+    (d)Named colors=>
+          color: red;
+
+2. font-size: 48px;
+3. font-weight: 100,200,300.../normal/bold
+4. font-style: italic;
+4. font-family: "Times New Roman", sans-serif;
+        --> For font names with white spaces you should(not necessary) enclose them in single/double quotes.
+        --> The font after the comma is the fallback font. Incase the first font is not available on the client's machine, the fallback font will be used. We can specify as many fallback fonts as we want by appending them using commas.
+5. text-align: centre/left/right;
+4. text-decoration: underline/line-through;
+        --> syntax] text-decoration: decoration-line(required) color style thickness
+        --> common use case is to remove underline from anchor tags by setting text-decoration: none
+5. text-transform: uppercase/lowercase;
+6. line-height: 20px/2(this sets the line height to twice the element's font size);
+*/
+
+/* Adding GOOGLE fonts */
+p{
+    font-family: 'Smokum', cursive;
+    font-size: 43px;
+    text-align: center;
+    text-decoration: underline red wavy;
+}

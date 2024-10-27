@@ -1,0 +1,29 @@
+You must have noticed that we dont actually install javascript. There is a specification ECMA-262 script that browsers then go and implement. So it is the job of the browser to follow the rules and implement the language. So for a long time browsers were the only place we would run javascript. But there is so much we could do with other languages like python or ruby. For ex: creating webservers, make command line tools(actual applications that we run on command line instead of a traditional gui), interact with filesystem, create native apps, create video games, etc. These are things that we really couldn't do with javascript until the advent of Node(Node.js). 
+
+What is Node.js?
+Node is a runtime environment that allows you to run JavaScript code outside the browser. (It's not a programming language)
+
+What we can do with Node?
+1. Create webservers(this is what we care about)
+2. Make command line tools(like npm)
+3. Build native apps(using electron which is built using node)
+4. Create video games
+5. Build drone software
+6. And much more......
+
+Why are we studying it?
+Node allows us to use the same javascript syntax that we know and love to write server side code instead of relying on other languages like python and ruby.
+
+Node REPL
+- It is a simple interactive computer programming environment that takes single user inputs, executes them, and returns the result to the user. 
+- The javascript console in our browser is also a REPL(read-event-print-loop). 
+- We can think of Node REPL as the node equivalent of the javascript console in our browsers. 
+- We enter Node REPL by typing "Node" in the terminal. 
+- Just like we dont use chrome console to type full applications, we use it to play around, try new things or in education contexts, same idea here with node REPL
+
+- Not included in Node : Because Node does not run in the browser, we dont have access to all the browser stuff. "window", "document" and DOM api's(like query selector, getattribute, append, etc) are not a thing in node.
+- New stuff in Node : Node comes with a bunch of built-in-modules that dont exist in the browser. These modules help us do things like interact with the operating system and files/folders.
+- In javascript, the "window" is the global object. It sits on the top of everything. This is where whole bunch of functions like alert are stored. The "window" equivalent of node is called "global". It has functions like setTimeout, setInterval, etc. But just like javascript where I could just call setTimeout instead of window.setTimeout, in node also we can just call setTimeout instead of global.setTimeout.
+
+
+

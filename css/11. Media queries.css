@@ -1,0 +1,26 @@
+/* Media queries allows us to selectively apply styles depending on particular parameters like screen width or device type */
+
+@media (width: 401px){ /* exact width */
+    h1{
+        color: red;
+    }
+}
+
+@media (min-width: 300px){ /* for width(to be hyperspecific, viewport width) of 300px and above color will change to blue */
+    h1{
+        color: blue;
+    }
+}
+
+@media (max-width: 100px){ /* for width(to be hyperspecific, viewport width) of 100px and below color will change to yellow */
+    h1{
+        color: yellow;
+    }
+}
+
+/* Combining media queries using keyword 'and' */
+@media (min-width: 450px) and (max-width: 500px){  /* for width(to be hyperspecific, viewport width) between 450px and 500px, color will change to violet */
+    h1{
+        color: violet;
+    }
+}

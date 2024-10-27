@@ -1,0 +1,23 @@
+<!-- apply -->
+Hame agar kai saari classes ko ek class mein combine karna ho to then we use @apply directive in index.class
+.newClassName{
+    @apply text-white bg-yello-500 ........
+}
+If we want tailwind utility classes to be able to override the styles of our custom class then we will to place this between
+@tailwind base;
+@tailwind components;
+<!-- place here -->
+@tailwind utilities;
+
+<!-- layer -->
+But using layer directive we can write our custom class at the bottom and specify after which layer we want to place our custom class
+@layer base/components/utilities {
+    .newClassName{
+        @apply text-white bg-yello-500 ........
+    }
+}
+<!-- Global styles -->
+If we want to apply global styles in tailwind we do this in index.css. After the three layers write,
+:root{
+    @apply .........
+}

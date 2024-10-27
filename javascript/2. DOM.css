@@ -1,0 +1,16 @@
+.styles{
+    height: 100px;
+    width: 100px;
+    border: 5px red solid
+}
+.classlist{
+    height: 100px;
+    width: 100px;
+    border: 5px red solid
+}
+.purple{
+    border-color: purple;
+}
+.rounded{
+    border-radius: 2em;
+}

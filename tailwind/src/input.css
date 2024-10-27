@@ -1,0 +1,4 @@
+/* Is file mein jo jo css rules ham use karenge wo automatically import ho jayenge instead of importing everything like we did in bootstrap */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

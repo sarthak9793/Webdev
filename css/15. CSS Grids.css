@@ -1,0 +1,51 @@
+.container{
+    clear: both;
+    background-color: red;
+    height: 700px;
+    width: 900px;
+    display: grid;
+    /* To set number of rows */
+        /* This creates three rows of 200px each */
+        grid-template-rows: 200px 200px 200px; 
+        /* Or */
+        grid-template-rows: 1fr 1fr 1fr; /* 1fr means 1 fraction of the entire height available. We can also use the two units together. */
+        /* Or */
+        grid-template-rows: repeat(3,1fr);
+
+    /* To set number of columns */
+        /* This creates three columns of 200px each */
+        grid-template-columns: 200px 200px 200px; 
+        /* Or */
+        grid-template-columns: 1fr 1fr 1fr; /* 1fr means 1 fraction of the entire width available. We can also use the two units together. */
+        /* Or */
+        grid-template-columns: repeat(3,1fr);
+
+    /* row-gap */
+    row-gap: 15px;
+    /* column-gap */
+    column-gap: 15px;    
+}
+.item{
+    /* height: 122px;
+    width: 122px; */
+    background-color: blue;
+}
+.item1{
+    /* grid-column-start and grid-column-end */
+        /* We can use grid-column-start and grid-column-end to make grid items span multiple columns */
+    grid-column-start: 1; /* .item1 starts from column line 1 */
+    grid-column-end: 3; /* and ends at column line 3 */
+    /* OR */
+    grid-column: 1 / span 2; /* .item1 starts from column line 1 and spans 2 columns */
+
+
+    
+    /* grid-row-start and grid-row-end */
+        /* We can use grid-row-start and grid-row-end to make grid items span multiple rows */
+    grid-row-start: 1; /* .item1 starts from row line 1 */
+    grid-row-end: 3; /* and ends at row line 3 */
+    /* OR */
+    grid-row: 1 / span 2; /* .item1 starts from row line 1 and spans 2 rows */
+}
+
+/* Note: We can also set display of container as inline-grid, which means that the container would be treated as an inline element instead of being treated as a block level element */

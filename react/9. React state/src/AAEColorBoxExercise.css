@@ -1,0 +1,7 @@
+.colorBox{
+    display: grid;
+    height: 500px;
+    width: 500px;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Demo</title>
+</head>
+<body>
+    <form action="/tacos">
+        <!-- The action attributes specifies where the data should be sent -->
+        <!-- the method attribute specifies which HTTP method should be used -->
+
+        <h1>FORMs</h1>
+        <!-- Common input types -->
+        <h2>Common Input types</h2>
+        <input type="text" placeholder="text input"><br>
+        <input type="password" placeholder="password input"><br>
+        <input type="email" placeholder="email input"><br>
+        <input type="color"><br>
+        <input type="date"><br>
+        <hr>
+
+        <h2>Labels</h2>
+        <!-- Labels are connected to input through the for-id pair -->
+        <label for="name">Name</label>
+        <input type="text" id="name"><br>
+        <label for="password">Password</label>
+        <input type="password" id="password">
+        <hr>
+
+        <h2>Buttons</h2>
+        <!-- A <button> inside a form by default submits the form unless it is specified to not submit -->
+        <button>I will submit</button>
+        <button type="button">I will not submit</button><br>
+        <!-- Another way to create a submit button is:  -->
+        <input type="submit"><br>
+            <!-- We can change the default text of button by using the value attribute -->
+            <input type="submit" value="Submit goddamit"><br>
+        <hr>
+
+        <h2>Name attribute</h2>
+        <!-- It is like a variable that will hold the value that we submitted in the form to be sent to the server  -->
+        <label for="name">Name</label>
+        <input type="text" name="username" id="name">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+            <!-- Now if I enter my name and password and click submit, this is what the url looks like: http://127.0.0.1:5500/tacos?username=sarrthak&password=abcd -->
+        <hr>
+
+        <h2>Other Input types</h2>
+        <h3>Radio Buttons</h3>
+        <!-- Radio buttons -->
+            <!-- To connect all radio buttons together, so that only one can be selected at a time, they should have a common name -->
+            <!-- Also for radio buttons we should also specify value attribute, otherwise when we click on male and click submit, this will be url: http://127.0.0.1:5500/tacos?username=&password=&gender=on, 'gender=on' does not make sense, but if we specify a value attribute for the radio buttons we will get something like this: http://127.0.0.1:5500/tacos?username=&password=&gender=male-->
+            <!-- We can also have an option selected by default by using the 'checked' attribute -->
+        <span>Select Gender:</span><br>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female" checked><br>
+
+        <!-- Checkboxes -->
+            <!-- We can also set an option to be checked by default by using the 'checked' attribute -->
+        <h3>Checkboxes</h3>
+        <span>Select Hobbies:</span><br>
+        <label for="astronomy">Astronomy</label>
+        <input type="checkbox" name="astronomy" id="astronomy">
+        <label for="cooking">Cooking</label>
+        <input type="checkbox" name="cooking" id="cooking" checked>
+        <label for="science">Science</label>
+        <input type="checkbox" name="science" id="science"><br>
+            <!-- When I check on all of them and submit, this is what i get: http://127.0.0.1:5500/tacos?username=&password=&astronomy=on&cooking=on&science=on -->
+
+        <!-- Select -->
+            <!-- We can select a default option by using the 'selected' attribute -->
+        <h3>Select</h3>
+        <label for="city">City of residence</label>
+        <select name="city" id="city">
+            <option value="ghaziabad">Ghaziabad</option>
+            <option value="delhi" selected>Delhi</option>
+            <option value="noida">Noide</option>
+        </select><hr>
+            <!-- When i select ghaziabad and click submit, this is the url I get: http://127.0.0.1:5500/tacos?username=&password=&gender=female&cooking=on&city=ghaziabad -->
+        
+    </form>
+    <form action="/quessadila">
+        <h2>Form Validation</h2>
+        <!-- We can use the 'required' attribute to make an input field mandatory to be filled by the user. We can also set minlength and maxlength of input that will be acceptable. There are some input types that have a default validation built in, for example, <input type="email"> so the input, user enters should have to match the pattern: ____@domain_name. These are some examples of inbuilt client side form validation that the browser provides. We can also create our own pattern that the input should match to using regular expressions, but they are complicated, so I am skipping it.   -->
+        <label for="favoriteColor">Favorite Color</label>
+        <input type="text" id="favoriteColor" required>
+        <label for="emailid">Email</label>
+        <input type="email" id="emailid">
+        <label for="pswd">Password</label>
+        <input type="password" id="pswd" minlength="3" maxlength="5">
+        <button>Submit</button>
+    </form>
+    
+</body>
+</html>
+
+<!-- BLOCK vs INLINE elements -->
+
+<!-- Inline elements: Inline elements fit in alongside other elements
+Block elements: Block elements take up a whole "block" of space. They go all the way across the screen-->

@@ -1,0 +1,71 @@
+/* Setting Up example */
+div{
+    height: 100px;
+    width: 100px;
+    border: 2px red solid;
+}
+
+/* Content Box: Where the actual content of an element is. */
+    /* Width and height control the size of content box */
+div.content{
+    width: 200px;
+    height: 200px;
+}
+
+/* Padding */
+    /* We have padding-left/right/top/bottom or the shorthand property 'padding' to set all padding at once */
+    /* padding: 20px --> sets the same padding for all four sides
+    padding: 20px 40px --> sets the same padding for top-bottom and left-right
+    padding: 10px 20px 30px 40px --> sets the padding for top, right, bottom, left respectively */
+div.padding{
+    padding: 20px;
+}
+
+/* Border */
+    /* We can set individual border properties for individual sides using: border-top/left/right/bottom-width/color/style*/
+    /* We can set all properties for individual sides at once using border-top/right/bottom/left: width color style.  */
+    /* We can set all properties for all sides at once using: border 5px red solid */
+div.border{
+    border: 5px purple solid;
+    border-radius: 10px; 
+}
+/* Box sizing */
+    /* The CSS box-sizing property allows us to include the padding and border in an element's total width and height. */
+div.box-sizing{
+    border: 5px purple solid;
+    padding: 10px;
+    box-sizing: border-box;
+    /* The size of content box shrinked by 15px on each side to accomodate the border-width and padding, so now the size of content box is 70x70 */
+}
+
+/* Margin */
+    /* Syntax of Margin and padding is same */
+    /* By default our body element also has some margin. We can remove it setting its margin to 0 */
+    /* We can also use the keyword 'auto' when specifying margin. For example, if we set the left and right margin to be auto, then that element is going to be horizontally centered in its container. So whatever space there is in the container will be automatically distributed to the left and right margin
+        Ex] margin 2em auto : top and bottom = 2em margin and box is horizontally centered in its container
+        Ex] margin: auto : top and bottom = 0 margin and box is horizontally centered in its container
+    */
+div.margin{
+    margin: 40px;
+    margin: auto auto;
+}
+body{
+    margin: 0px;
+}
+
+/* Display property */
+    /* display: inline --> inline elements dont break the flow of the document. width and height are ignored. Margin and padding push away element horizontally but not vertically. 
+    
+    display: block --> block elements break the flow of the document. Width, height, margin and padding are respected.
+    
+    display: inline-block --> Behaves like an inline element  (i.e. they dont break the flow of the document) except width, height, margin and padding are respected
+    
+    We can also hide an element, by setting display: none. Note that the element will not take up any space*/
+
+/* Visibility property */
+/*  We can also set an element's visibility: visible/hidden
+    The difference between display: none and visibility: hidden is that visibility:hidden hides the element, but it still takes up space in the layout wheras display:none removes the element from the document. It does not take up any space */
+
+/* For my autistic brain: 
+    Inline elements: Inline elements fit in alongside other elements
+    Block elements: Block elements take up a whole "block" of space. They go all the way across the screen */

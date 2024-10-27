@@ -1,0 +1,41 @@
+/* px - absolute size
+   % - size set relative to the parent element
+     - size of 80% means that the size of element is 80% of its parent element
+     - For some properties % are relative to the parent element. Ex] For width and height, % are relative to the width and height of the parent element. But for some other properties, % are relative to the element itself. Ex] For line-height, % are relative to the font-size of the element itself.
+   em - size set relative to the parent element
+      - For some properties em's are relative to the parent element. Ex] For font-size em's are relative to the font-size of the parent element. But for some other properties em's are relative to the element itself. Ex] For border-radius/padding/margins em's are relative to the font size of the element itself
+   rem - A disadvantage of em's is that they can grow or shrink very quickly
+    - For ex] If we set the font size of ul = 1.5em
+            <ul> --> font size is 1.5 times greater than parent's font size
+                <li>Fruits
+                    <ul> --> font size is 1.5 times greater than the first <ul> font size
+                        <li>Apple
+                            <ul> --> font size is 1.5 times greater than second <ul> font size
+                                <li>Kashmiri Apple</li>
+                            </ul>
+                        </li>
+                        <li>Orange</li>
+                    </ul>
+                </li>
+                <li>Vegetables</li>
+            </ul>
+        Also if we set the font size to be 0.8 em, then the font size can decrease very quickly
+    - So in such cases we can use rem, which sets the size relative to the root element i.e. <html>. It does not grow/shrink exponentionally. If the size of root element is 20px, then 1 rem will always 20px and 2rem will always be 40px
+   
+   vh - viewport height
+      - 1vh means 1% of viewport height
+   vw - viewport width
+      - 1vw means 1% of viewport width
+   
+*/
+
+p{
+    font-size: 25px;
+}
+span{
+    font-size: 2em;
+    /*The font-size of the <span> is set to twice that of its parent element, <p>*/
+}
+ul{
+    font-size: 1.5em;
+}

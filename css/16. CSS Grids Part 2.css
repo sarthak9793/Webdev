@@ -1,0 +1,50 @@
+.container{
+    clear: both;
+    background-color: red;
+    height: 800px;
+    width: 900px;
+    display: grid;    
+    /* grid-template-rows: repeat(3,1fr); */
+    /* grid-template-columns: repeat(3,1fr); */
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px;
+    row-gap: 15px;
+    column-gap: 15px;
+
+    /* justify-content: It is used to horizontally align the entire grid item within the container */
+    justify-content: start;
+    justify-content: end;
+    justify-content: center;    
+    /* align-content: It is used to vertically align the entire grid item within the container */
+    align-content: start;
+    align-content: end;
+    align-content: center;
+    /* We can also use "place-content: align-content justify-content" shorthand to set both properties at once. If we specify only one value, then both align-content and justify-content is set to that value. For ex] place-content: center, sets both align-content and justify-content as center */
+    place-content: center;
+    
+    /* justify-items: It is used to horizontally align all individual grid item within its grid cell */
+    justify-items: start;
+    justify-items: end;
+    justify-items: center;
+    /* align-items: It is used to vertically align all individual grid item within its grid cell */
+    align-items: start;
+    align-items: center;
+    align-items: end;
+    /* We can also use "place-items: align-items justify-items" shorthand to set both properties at once. If we specify only one value, then both align-items and justify-items is set to that value. For ex] place-items: center, sets both align-items and justify-items as center */
+    place-items: end start;
+
+}
+.item{
+    height: 122px;
+    width: 122px;
+    background-color: blue;
+    border: 2px solid black;
+}
+.item3{
+    /* justify-self: It is used to horizontally align a specific grid item within its grid cell */
+    justify-self: end;
+    /* align-self: It is used to vertically align a specific grid item within its grid cell */
+    align-self: start;
+    /* We can also use "place-self: align-self justify-self" shorthand to set both properties at once. If we specify only one value, then both align-self and justify-self is set to that value. For ex] place-self: center, sets both align-self and justify-self as center */
+    place-self: start end;
+}
